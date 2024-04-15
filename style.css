@@ -1,7 +1,7 @@
 :root {
     --primary-color: rgb(236, 236, 236);
-    --secondary-color: rgb(21, 21, 21);
-    --blue-color: #2bc5cd;
+    --secondary-color: rgb(231, 205, 55));
+    --dark-color: #161616ee;
     --orange-color: #ff693d;
     --border: 2px solid var(--blue-color);
     --spacing: 28px;
@@ -14,9 +14,9 @@
 .container {
 display: grid;
 grid-template-areas:
-"hg_header school student "
-"hg_header hg_main  time   "
-"alumni hg_footer hg_footer";
+"hg_header equipamiento halterofilia "
+"hg_header hg_main  instalaciones   "
+"boxeo hg_footer hg_footer";
 grid-template-columns: repeat(auto-fit, minmax (500px, 1fr));
 grid-auto-rows: 3fr;
 /* width: 100%;
@@ -41,63 +41,137 @@ box-sizing: border-box;
 @media (max-width: 550px) {
   
 .container {
-    grid-template-columns: 1fr;
-  }
+    grid-template-areas: "hg_header"
+                        "equipamiento"
+                            "halterofilia"
+                            "hg_main"
+                            "instalaciones"
+                            "boxeo"
+                            "hg_footer"
+                            ;
+grid-template-columns: 100%;
+grid-template-rows: 1fr 
+   1fr 
+   1fr
+   1fr 
+   1fr;
 }
 
+ .hg_footer {
+max-height: 300px;
+
+ } 
+
+
+}
+
+/* grid-template-areas:
+"hg_header school student "
+"hg_header hg_main  time   "
+"alumni hg_footer hg_footer";
+ */
+
+ /* MAQUETANDO EL HEADER */
 
 
 .hg_header {
 grid-area: hg_header;
-background-color: #2bc5cd;
+background-color: #161616ee;
+
+
+}
+
+.hg_header > h1 {
+text-transform: uppercase;
+justify-content: center;
+text-align: center;
+font-size: 20px;
+padding-top: 40px;
+color: rgb(231, 205, 55);
+}
+
+.hg_header > p {
+align-items: center;
+justify-content: center;
+/* object-position: center; */
+align-items: center;
+align-content: center;
+justify-items: center; 
+padding: 130px 30px;
+color: aliceblue;
+font-weight: 700;
 
 
 }
 
 
+/* MAQUETANDO EL FOOTER */
 
+.hg_footer > h3 {
+padding: 15px;
 
-
-
-.school {
-grid-area: school;
 }
 
-.student {
-grid-area: student;
+.hg_footer > p {
+padding: 15px;
+justify-content: center;
+justify-items: center;
+
+}
+
+.hg_footer >  button {
+margin: 20px;
+text-transform: uppercase;
+font-size: 10px;
+font-weight: 700;
+
+}
+
+
+/* OTRAS SECCIONES */
+
+.equipamiento {
+grid-area: equipamiento;
+}
+
+.halterofilia {
+grid-area: halterofilia;
 object-fit: center;
 
 }
 
+/* MAQUETANDO EL MAIN  */
+
 .hg_main {
 grid-area: hg_main;
-border: 3px solid var(--blue-color);
+border: 5px solid rgb(231, 205, 55);
 justify-content: center;
 object-position: center;
 align-items: center;
 align-content: center;
 justify-items: center; 
 text-align: center;
-color: #2bc5cd;
+color: rgb(231, 205, 55);
 text-transform: uppercase;
-font-size: 12px;
+font-size: 10px;
 font-weight: 900;
+background-color:  #161616ee ;
 
 }
 
-.time {
-grid-area: time;
+.instalaciones {
+grid-area: instalaciones;
 }
 
-.alumni {
-grid-area: alumni;
+.boxeo {
+grid-area: boxeo;
 object-fit: center;
 
 }
 
 .hg_footer {
 grid-area: hg_footer;
-background-color: #ff693d;
+background-color: #161616ee;
 color: white;
 align-items: center;
 
@@ -114,25 +188,25 @@ padding: 10px;
 
 
 
-  .school {
-    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+  .equipamiento {
+    background-image: url(https://images.unsplash.com/photo-1526401485004-46910ecc8e51?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   }
   
-  .student {
-    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+  .halterofilia {
+    background-image: url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   }
   
-  .time {
-    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+  .instalaciones {
+    background-image: url(https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   }
   
-  .alumni {
-    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+  .boxeo {
+    background-image: url(https://images.unsplash.com/photo-1591173627030-6fc3077b8d23?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   }
   
-  .alumni,
-  .school,
-  .student,
-  .time {
+  .boxeo,
+  .equipamiento,
+  .halterofilia,
+  .instalaciones {
     background-size: cover;
   }
