@@ -23,6 +23,10 @@ grid-auto-rows: 3fr;
 height: 100%; */
 padding: 10px;
 gap: 20px;
+transition: 0.5s;
+height: 100%;
+margin: 20px;
+padding-top: 100px;
 
 }
 
@@ -41,13 +45,13 @@ box-sizing: border-box;
 @media (max-width: 550px) {
   
 .container {
-    grid-template-areas: "hg_header"
-                        "equipamiento"
-                            "halterofilia"
-                            "hg_main"
-                            "instalaciones"
-                            "boxeo"
-                            "hg_footer"
+    grid-template-areas:  "hg_header"
+                          "equipamiento"
+                          "halterofilia"
+                          "hg_main"
+                          "instalaciones"
+                          "boxeo"
+                          "hg_footer"
                             ;
 grid-template-columns: 100%;
 grid-template-rows: 1fr 
@@ -55,6 +59,7 @@ grid-template-rows: 1fr
    1fr
    1fr 
    1fr;
+   
 }
 
  .hg_footer {
@@ -77,6 +82,7 @@ max-height: 300px;
 .hg_header {
 grid-area: hg_header;
 background-color: #161616ee;
+
 
 
 }
@@ -179,10 +185,17 @@ align-items: center;
 }
 
 .hg_footer > button {
+cursor: pointer;
 padding: 10px;
+background-color:  rgb(231, 205, 55);
 
 }
 
+.hg_footer > p > span {
+color:  rgb(231, 205, 55);
+font-weight: 600;
+
+}
 
 
 
